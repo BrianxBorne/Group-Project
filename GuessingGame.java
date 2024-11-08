@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//This is the main abrastract class that acts as the blueprint for the other classes e.g DOG
 
 abstract class Animal {
     protected String name;
@@ -30,15 +31,19 @@ abstract class Animal {
         return isFlexible;
     }
 
-    // This is the method we used so that when someone enters the attributes an ascii art of the animal is displayed 
+// This is the method we used so that when someone enters the attributes an ascii art of the animal is displayed 
+
     public abstract void displayAsciiArt();
 }
 
-// Dog class extending Animal
+// Dog class extending Animal class
 class Dog extends Animal {
     public Dog() {
         super("Dog", 4, true, false);
     }
+
+
+//Mr Benard , you will see these type of art in the code but we obtained them from asciiart.com to make the game more fun.
 
     @Override
     public void displayAsciiArt() {
@@ -69,7 +74,7 @@ class Dog extends Animal {
 
 
 
-// Cat class extending Animal
+// Cat class extending Animal class
 class Cat extends Animal {
     public Cat() {
         super("Cat", 4, true, true);
@@ -93,7 +98,7 @@ class Cat extends Animal {
 
 
 
-// Chicken class extending Animal
+// Chicken class extending Animal class
 class Chicken extends Animal {
     public Chicken() {
         super("Chicken", 2, false, false);
@@ -159,7 +164,7 @@ class Cow extends Animal {
 
 
 
-// Snake class extending Animal
+// Snake class extending Animal class
 class Snake extends Animal {
     public Snake() {
         super("Snake", 0, false, false);
@@ -192,7 +197,7 @@ class Snake extends Animal {
 
 
 
-// Factory class to create animals
+// AnimalFactory class to create animals
 class AnimalFactory {
     public static Animal createAnimal(String type) {
         switch (type) {
